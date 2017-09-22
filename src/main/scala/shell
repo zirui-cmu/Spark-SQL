@@ -1,0 +1,3 @@
+val input = sc.textFile("s3://cmucc-datasets/p42/Graph")
+val vertices = input.map(line => line.split("\t")).distinct.count
+val edges =  input.map(line => (line.split("\t")(0), line.split("\t")(1))).distinct.count
